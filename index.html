@@ -38,7 +38,8 @@
     <script>
     function testCreditCard () {
   myCardNo = document.getElementById('CardNumber').value;
-  myCardType = document.getElementById('CardType').value;
+  myCardType = document.getElementById('cardType').value;
+
   if (checkCreditCard (myCardNo,myCardType)) {
     alert ("Credit card has a valid format")
   } 
@@ -49,7 +50,7 @@
 </head>
 <body>
     <h2 style="margin-left:15%;margin-top:2%;">Checkout</h2>
-    <form>
+    
 
         
               <!-- Credit Card Payment Form - START -->
@@ -87,21 +88,24 @@
                             <h3 class="text-center">Payment Details</h3>
                             
                         </div>
+                        <div class="row">
+                            <div class="col-md-7 mb-2 ">
+                                <!--<label class="control-label pull-left">Select </label>-->
+                                <select id="cardType" class="form-control">
+                                      <option value="MasterCard">Master Card</option>
+                                      <option value="Visa">Visa</option>
+                                      <option value="AmEx">American Express</option>
+                                      <option value="Discover">Discover</option>
+                                 </select>
+
+                            </div>
+                        </div>
                     
                     
                     
                     
                             
-                            <div class="row">
-                                <div class="col-md-12 mb-2 ">
-                                    <!--<label class="control-label pull-left">Select </label>-->
-                                    <span class="gateway-radio"><input type="radio" class="radio-inline" name="gateway" value="master"><label>Master</label></span>
-                                    <span class="gateway-radio"><input type="radio" class="radio-inline" name="gateway" value="visa"><label>Visa</label></span>
-                                    <span class="gateway-radio"><input type="radio" class="radio-inline" name="gateway" value="american"><label>American Express</label></span>
-                                    <span class="gateway-radio"><input type="radio" class="radio-inline" name="gateway" value="discover"><label>Discover</label></span>
-                                   
-                                </div>
-                            </div>
+                            
                             <div class="row">
                                     <div class="col-md-12 mb-3">
                                     <img class="img-responsive cc-img" id="img1" src="http://www.prepbootstrap.com/Content/images/shared/misc/creditcardicons.png">
@@ -113,7 +117,7 @@
                                     <div class="col-md-7 mb-2">
                                         <div class="form-group">
                                             <label>Card Number</label>
-                                            <input type="text" class="form-control" id="CardNumber"required  />
+                                            <input type="text" class="form-control" id="CardNumber" onchange="testCreditCard()" required  />
                                         </div>
                                     </div>
                                 </div>
@@ -124,10 +128,18 @@
                                     <div class="form-group">
                                         <label>Expiration</label>
                                             <select class="form-control">
-                                                    <option>01</option>
-                                                    <option>02</option>
-                                                    <option>03</option>
-                                                    <option>04</option>
+                                                <option>01</option>
+                                                <option>02</option>
+                                                <option>03</option>
+                                                <option>04</option>
+                                                <option>05</option>
+                                                <option>06</option>
+                                                <option>07</option>
+                                                <option>08</option>
+                                                <option>09</option>
+                                                <option>10</option>
+                                                <option>11</option>
+                                                <option>12</option>
                                             </select>
                                     </div>
                                 </div>
@@ -142,6 +154,11 @@
                                                         <option>2023</option>
                                                         <option>2024</option>
                                                         <option>2025</option>
+                                                        <option>2026</option>
+                                                        <option>2027</option>
+                                                        <option>2028</option>
+                                                        <option>2029</option>
+                                                        <option>2030</option>
                                                 </select>
                                         </div>
                                     </div>
@@ -168,13 +185,13 @@
         </div>
     </div>
     <!-- Credit Card Payment Form - END -->
+</div>
+</div>
+</div>
     
     
-            </div>
-          </div>
-        </div>
        
       
-    </form>
+    
     </body>
     </html>
